@@ -7,6 +7,7 @@ import schema from './components/table/table-schema/table-one';
 import rowData from './components/table/table-data/table-one';
 import Stepper from './components/stepper/';
 import Steps from './components/stepper/stepper-one';
+import Panel from './components/panel/';
 
 import './style.css';
 
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <>
       <Stepper steps={Steps} />
+      <Panel />
       {rowData ? <Table schema={schema} rowData={rowData} /> : null}
     </>
   );

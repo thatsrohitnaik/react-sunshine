@@ -1,0 +1,27 @@
+.centerText {
+  text-align: center;
+}
+.pMargin {
+  margin: 0px;
+  font-size: small;
+}
+
+.tableWidth {
+  width: 100%;
+}
+
+.divCard {
+  border: 1px solid rgba(0, 0, 0, 0.308);
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.buttonBig {
+  height: 100%;
+  width: 50%;
+  margin: 2px;
+}
+
+.displayFlex {
+  display: flex;
+}
