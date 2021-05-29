@@ -28,12 +28,12 @@ const App = () => {
   const [rowData, setRowData] = useState(null);
 
   const getData = params => {
-    axios.get('/table-twddo.json').then(resp => {
+    axios.get('/table-two.json').then(resp => {
       setRowData(resp.data);
       console.log('okokoko');
     });
   };
-  getData();
+ // getData();
 
   return <>{rowData ? <Table schema={schema} rowData={rowData} /> : null}</>;
 };
