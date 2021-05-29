@@ -4,7 +4,7 @@ import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 import axios from 'axios';
 import Table from './components/table/';
-import schema from './schema/table-one';
+import schema from './table-schema/table-one';
 
 import './style.css';
 
@@ -25,17 +25,7 @@ const rowData2 = [
 ];
 
 const App = () => {
-  const [rowData, setRowData] = useState(null);
-
-  const getData = params => {
-    axios.get('/table-two.json').then(resp => {
-      setRowData(resp.data);
-      console.log('nako nako');
-    });
-  };
-  getData();
-
-  return <>{rowData ? <Table schema={schema} rowData={rowData} /> : null}</>;
+  return <>{rowData2 ? <Table schema={schema} rowData={rowData2} /> : null}</>;
 };
 
 export default App;
