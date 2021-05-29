@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
@@ -8,71 +8,34 @@ import schema from './schema/table-one';
 
 import './style.css';
 
+const rowData2 = [
+  {
+    fileName: '1.msg',
+    attachment: false,
+    sourceFile: '3.msg',
+    ext: '.msg',
+    dsEntities: 4,
+    pages: 1,
+    redactEntities: 3,
+    redactEntitiesPages: 2,
+    fromToCcDS: true,
+    redact: false,
+    share: 'Share With DS'
+  }
+];
+
 const App = () => {
-  const [gridApi, setGridApi] = useState(null);
-  const [gridColumnApi, setGridColumnApi] = useState(null);
   const [rowData, setRowData] = useState(null);
 
-  const onGridReady = params => {
-    setGridApi(params.api);
-    setGridColumnApi(params.columnApi);
-
-    const updateData = data => {
-      setRowData(data);
-    };
-    axios.get('/table-one.json').then(resp => {
-      updateData(resp.data);
+  const getData = params => {
+    axios.get('/table-twddo.json').then(resp => {
+      setRowData(resp.data);
+      console.log('okokoko');
     });
   };
+  getData();
 
-  const onQuickFilterChanged = () => {
-    gridApi.setQuickFilter(document.getElementById('quickFilter').value);
-  };
-
-  return (
-    <>
-      <div className="ag-theme-alpine" style={{ height: 400, width: 600 }}>
-        <AgGridReact
-          defaultColDef={{
-            flex: 1,
-            minWidth: 100,
-            resizable: true
-          }}
-          suppressRowClickSelection={true}
-          rowSelection={'multiple'}
-          onGridReady={onGridReady}
-          rowData={rowData}
-        >
-          <AgGridColumn
-            headerName="Athlete"
-            field="athlete"
-            minWidth={180}
-            headerCheckboxSelection={true}
-            headerCheckboxSelectionFilteredOnly={true}
-            checkboxSelection={true}
-          />
-          <AgGridColumn field="age" />
-          <AgGridColumn
-            field="country"
-            minWidth={150}
-            filter="agTextColumnFilter"
-            filterParams={{ caseSensitive: true, defaultOption: 'startsWith' }}
-          />
-          <AgGridColumn field="year" filter="agNumberColumnFilter" />
-          <AgGridColumn
-            field="date"
-            minWidth={150}
-            filter="agDateColumnFilter"
-          />
-          <AgGridColumn field="sport" minWidth={150} />
-          <AgGridColumn field="gold" />
-          <AgGridColumn field="silver" />
-          <AgGridColumn field="bronze" />
-          <AgGridColumn field="total" />
-        </AgGridReact>
-      </div>
-    </>
-  );
+  return <>{rowData ? <Table schema={schema} rowData={rowData} /> : null}</>;
 };
 
 export default App;
