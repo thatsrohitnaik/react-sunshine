@@ -1,0 +1,70 @@
+body {
+  background: #f7f6f6;
+}
+.largeFont {
+  font-size: large;
+  margin: auto;
+}
+.smallFont {
+  font-size: small;
+}
+.stepper {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0;
+  width: auto;
+  list-style: none;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    content: '';
+    width: calc(100% - 20px);
+    background: #e7e7e7;
+  }
+}
+
+.stepper__item {
+  flex: 100%;
+  padding: 20px 20px 20px 40px;
+  background: white;
+  margin: 0 0 0 -19px;
+  -webkit-clip-path: polygon(
+    20px 50%,
+    0% 0%,
+    calc(100% - 20px) 0%,
+    100% 50%,
+    calc(100% - 20px) 100%,
+    0% 100%
+  );
+
+  &.current {
+    background: orange;
+    font-weight: bold;
+    color: white;
+  }
+
+  &.complete {
+    background: rgb(10 10 10 / 40%);
+    color: white;
+  }
+
+  &:first-child {
+    padding: 20px;
+    -webkit-clip-path: polygon(
+      0% 0%,
+      calc(100% - 20px) 0%,
+      100% 50%,
+      calc(100% - 20px) 100%,
+      0% 100%
+    );
+  }
+
+  &:last-child {
+    -webkit-clip-path: polygon(20px 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}

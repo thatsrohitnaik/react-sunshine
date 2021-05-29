@@ -26,21 +26,25 @@ const Table = props => {
   };
   console.log(rowData);
   return (
-    <div className="ag-theme-alpine" style={{ height: 400, width: 600 }}>
+    <div className="ag-theme-alpine" style={{ height: 400 }}>
       {' '}
       <AgGridReact
         defaultColDef={{
           flex: 1,
           minWidth: 100,
-          resizable: true
+          resizable: true,
+          sortable: true
         }}
         suppressRowClickSelection={true}
         rowSelection={'multiple'}
         onGridReady={onGridReady}
+        pagination={true}
+        paginationAutoPageSize={true}
         rowData={rowData}
       >
-        {schema.map(s => (
+        {schema.map((s, index) => (
           <AgGridColumn
+            key={index}
             headerName={s.headerName}
             field={s.field}
             filter={s.filter}
