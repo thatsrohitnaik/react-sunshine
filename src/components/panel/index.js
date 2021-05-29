@@ -4,9 +4,19 @@ import './style.css';
 const panel = () => {
   const data = [
     {
-      icon: 'fas fa-cloud',
+      icon: 'fas fa-share-alt',
       count: 2,
       text: 'some test'
+    },
+    {
+      icon: 'fas fa-unlink',
+      count: 2,
+      text: 'some test'
+    },
+    {
+      icon: 'fas fa-ban',
+      count: 2,
+      text: 'spam'
     },
     {
       icon: 'fas fa-cloud',
@@ -14,22 +24,7 @@ const panel = () => {
       text: 'some test'
     },
     {
-      icon: 'fas fa-cloud',
-      count: 2,
-      text: 'some test'
-    },
-    {
-      icon: 'fas fa-cloud',
-      count: 2,
-      text: 'some test'
-    },
-    {
-      icon: 'fas fa-cloud',
-      count: 2,
-      text: 'some test'
-    },
-    {
-      icon: 'fas fa-cloud',
+      icon: 'fas fa-copy',
       count: 2,
       text: 'some test'
     }
@@ -37,22 +32,22 @@ const panel = () => {
 
   return (
     <>
-      <div className="container-fluid">
+      <div className="gutterSpace">
         <div className="row">
           <div className="col-sm-8">
-            <div className="container-fluid">
+            <div className="">
               <div className="row">
                 <>
                   {data.length > 0
                     ? data.map(d => (
                         <div className="col-sm-4">
                           <div className="divCard">
-                            <table className="tableWidth">
+                            <table className="tableSize">
                               <tr>
-                                <td>
-                                  <h1 className="centerText">
-                                    <i className="fas fa-cloud" />
-                                  </h1>
+                                <td className="tdWidth">
+                                  <h3 className="centerText">
+                                    <i className={d.icon} />
+                                  </h3>
                                 </td>
                                 <td>
                                   <table>
