@@ -75,11 +75,17 @@ const panel = () => {
             </div>
           </div>
           <div className="col-sm-4 displayFlex">
-            <button type="button" class="btn btn-light buttonBig">
-              Light
+            <button type="button" class="btn btn-info buttonBig success">
+              <span>
+                <i className="fas fa-sync" />
+                {' RE PROCESS'}
+              </span>
             </button>
             <button type="button" class="btn btn-light buttonBig">
-              Light
+              <span>
+                <i className="fas fa-edit" />
+                {' REDACT'}
+              </span>
             </button>
           </div>
         </div>

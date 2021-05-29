@@ -20,8 +20,13 @@
   height: 100%;
   width: 50%;
   margin: 2px;
+  margin-right: 10px;
 }
 
 .displayFlex {
   display: flex;
+}
+
+.success {
+  background-color: green;
 }
