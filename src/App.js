@@ -14,12 +14,14 @@ import Stepper from './components/stepper/';
 import Steps from './components/stepper/stepper-one';
 import Panel from './components/panel/';
 import InfoPanel from './components/info-panel';
+import NavBar from './components/nav/';
 
 import './style.css';
 
 const App = () => {
   return (
     <div className="">
+      <NavBar />
       <InfoPanel />
       <Stepper steps={Steps} />
       <Panel />

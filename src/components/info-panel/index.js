@@ -10,7 +10,7 @@ const InfoPanel = () => {
       <ul class="nav nav-tabs">
         <li className="" style={{ float: 'right' }}>
           <a data-toggle="tab" href="#">
-            Home
+            SAR SETTING
           </a>
         </li>
         <li className="active" style={{ float: 'right' }}>
