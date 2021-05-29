@@ -30,10 +30,10 @@ const App = () => {
   const getData = params => {
     axios.get('/table-two.json').then(resp => {
       setRowData(resp.data);
-      console.log('okokoko');
+      console.log('nako nako');
     });
   };
- // getData();
+  getData();
 
   return <>{rowData ? <Table schema={schema} rowData={rowData} /> : null}</>;
 };
