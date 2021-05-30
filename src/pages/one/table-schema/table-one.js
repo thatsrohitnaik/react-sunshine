@@ -12,7 +12,8 @@ const schema = [
     headerName: 'Attachment',
     field: 'attachment',
     minWidth: 180,
-    filter: 'agTextColumnFilter'
+    filter: 'agTextColumnFilter',
+    suppressMenu: true
   },
   {
     headerName: 'Source File',
@@ -23,7 +24,7 @@ const schema = [
   {
     headerName: 'Ext',
     field: 'ext',
-    minWidth: 20,
+    minWidth: 180,
     filter: 'agTextColumnFilter'
   },
   {
@@ -35,7 +36,7 @@ const schema = [
   {
     headerName: 'Pages',
     field: 'pages',
-    minWidth: 50,
+    minWidth: 180,
     filter: 'agNumberColumnFilter'
   },
   {

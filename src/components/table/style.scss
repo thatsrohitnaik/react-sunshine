@@ -3,24 +3,27 @@
   background: transparent;
 }
 
-.ag-mat-accent{ 
-  background-color: #fffff1
-  }
-
-.checkbox-background-color{
-  background-color: #fffff1   
-   }
-@import "~ag-grid-community/src/styles/ag-grid.scss";
-@import "~ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin";
+@import '~ag-grid-community/src/styles/ag-grid.scss';
+@import '~ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin';
 
 .ag-theme-alpine {
-    @include ag-theme-alpine((
-        // use theme parameters where possible
-        alpine-active-color: deeppink
-    ));
+  @include ag-theme-alpine(
+    (
+      // use theme parameters where possible
+        //   alpine-active-color: rgb(255, 94, 20),
+        selected-row-background-color:
+        ag-derived(background-color, $mix: foreground-color 25%),
+      row-hover-color: null,
+      checkbox-background-color: #5bc0de,
+    //  checkbox-border-radius: ag-derived(border-radius),
+      checkbox-checked-color: rgb(255, 94, 20),
+    //  checkbox-unchecked-color: ag-derived(foreground-color),
+    //  checkbox-indeterminate-color: ag-derived(checkbox-unchecked-color)
+    )
+  );
 
-    .ag-header {
-        // or write CSS selectors to make customisations beyond what the parameters support
-        text-style: italic;
-    }
+  .ag-header {
+    // or write CSS selectors to make customisations beyond what the parameters support
+    text-style: italic;
+  }
 }

@@ -64,7 +64,8 @@ const Table = props => {
           flex: 1,
           minWidth: 100,
           resizable: true,
-          sortable: true
+          sortable: true,
+          floatingFilter: true
         }}
         frameworkComponents={{
           dropDownRedact: dropDownRedact,
@@ -90,6 +91,7 @@ const Table = props => {
             }
             checkboxSelection={s.checkboxSelection}
             cellRenderer={s.cellRenderer}
+            suppressMenu={s.suppressMenu}
           />
         ))}
       </AgGridReact>
