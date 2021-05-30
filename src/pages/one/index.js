@@ -6,12 +6,12 @@ import detailSchema from './table-schema/table-one';
 import detailData from './table-data/table-one';
 import Stepper from '../../components/stepper/';
 import Steps from '../../components/stepper/stepper-one';
-import Panel from '../../components/panel/';
+import Notification from '../../components/notification/';
 import NavBar from '../../components/nav/';
 import BasicTable from '../../components/table/basic';
 import infoSchema from './table-schema/table-info';
 import infoData from './table-data/table-info';
-import panelData from './panel-data/panel';
+import notificationData from './notification-data/notification';
 
 import './style.css';
 
@@ -37,7 +37,7 @@ const PageOne = () => {
         ) : null}
       </div>
       <Stepper steps={Steps} />
-      <Panel panelData={panelData} />
+      <Notification data={notificationData} />
       {detailData ? <Table schema={detailSchema} rowData={detailData} /> : null}
     </div>
   );
