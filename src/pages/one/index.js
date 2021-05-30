@@ -12,8 +12,53 @@ import BasicTable from '../../components/table/basic';
 import infoSchema from './table-schema/table-info';
 import infoData from './table-data/table-info';
 import notificationData from './notification-data/notification';
+import Dropdown from '../../components/dropdown/';
 
 import './style.css';
+
+const dropDownOne = () => {
+  return (
+    <div class="dropdown">
+      <button
+        class="btn btn-default dropdown-toggle"
+        type="button"
+        data-toggle="dropdown"
+      >
+        Tutorials
+        <span class="caret" />
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+          <a tabindex="-1" href="#">
+            HTML
+          </a>
+        </li>
+        <li>
+          <a tabindex="-1" href="#">
+            CSS
+          </a>
+        </li>
+        <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">
+            New dropdown <span class="caret" />
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a tabindex="-1" href="#">
+                2nd level dropdown
+              </a>
+            </li>
+            <li>
+              <a tabindex="-1" href="#">
+                2nd level dropdown
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  );
+};
 
 const PageOne = () => {
   return (
@@ -37,7 +82,13 @@ const PageOne = () => {
         ) : null}
       </div>
       <Stepper steps={Steps} />
-      <Notification data={notificationData} />
+      <Notification notificationData={notificationData} />
+      <div className="row">
+        <div className="col-md-9">
+          <Dropdown />
+        </div>
+        <div className="col-md-3">{dropDownOne()}</div>
+      </div>
       {detailData ? <Table schema={detailSchema} rowData={detailData} /> : null}
     </div>
   );

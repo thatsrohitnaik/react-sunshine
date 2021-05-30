@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 const panel = props => {
-  const { panelData = [] } = props;
+  const { notificationData = [] } = props;
 
   return (
     <>
@@ -12,8 +12,8 @@ const panel = props => {
             <div className="">
               <div className="row">
                 <>
-                  {panelData.length > 0
-                    ? panelData.map(d => (
+                  {notificationData.length > 0
+                    ? notificationData.map(d => (
                         <div className="col-sm-4">
                           <div className="divCard">
                             <table className="tableSize">

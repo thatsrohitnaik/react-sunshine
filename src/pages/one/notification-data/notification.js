@@ -1,4 +1,4 @@
-const panelData = [
+const notificationData = [
   {
     icon: 'fas fa-share-alt',
     count: 133,
@@ -26,4 +26,4 @@ const panelData = [
   }
 ];
 
-export default panelData;
+export default notificationData;
