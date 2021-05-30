@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+import './style.css';
 
 const Table = props => {
   const { schema } = props;
@@ -24,7 +25,37 @@ const Table = props => {
   const onQuickFilterChanged = () => {
     gridApi.setQuickFilter(document.getElementById('quickFilter').value);
   };
-  console.log(rowData);
+
+  const dropDownRedact = param => {
+    return (
+      <div class="form-group">
+        <select
+          class="form-control selectDropdown"
+          id="redact"
+          style={{ border: 'none', backgroundColor: 'transparent' }}
+        >
+          <option>TRUE</option>
+          <option>FALSE</option>
+        </select>
+      </div>
+    );
+  };
+
+  const dropDownShare = param => {
+    return (
+      <div class="form-group">
+        <select
+          class="form-control selectDropdown"
+          id="share"
+          style={{ border: 'none', backgroundColor: 'transparent' }}
+        >
+          <option>Share With DS</option>
+          <option>Don Not Share</option>
+        </select>
+      </div>
+    );
+  };
+
   return (
     <div className="ag-theme-alpine" style={{ height: 400 }}>
       {' '}
@@ -34,6 +65,10 @@ const Table = props => {
           minWidth: 100,
           resizable: true,
           sortable: true
+        }}
+        frameworkComponents={{
+          dropDownRedact: dropDownRedact,
+          dropDownShare: dropDownShare
         }}
         suppressRowClickSelection={true}
         rowSelection={'multiple'}
@@ -54,6 +89,7 @@ const Table = props => {
               s.headerCheckboxSelectionFilteredOnly
             }
             checkboxSelection={s.checkboxSelection}
+            cellRenderer={s.cellRenderer}
           />
         ))}
       </AgGridReact>

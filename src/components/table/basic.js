@@ -25,6 +25,7 @@ const Table = props => {
     gridApi.setQuickFilter(document.getElementById('quickFilter').value);
   };
   console.log(rowData);
+
   return (
     <div
       className="ag-theme-alpine"
@@ -53,6 +54,7 @@ const Table = props => {
             field={s.field}
             filter={s.filter}
             minWidth={s.minWidth}
+            cellRenderer={s.cellRenderer}
           />
         ))}
       </AgGridReact>

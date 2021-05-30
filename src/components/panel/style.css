@@ -15,7 +15,8 @@
 .divCard {
   border: 1px solid rgba(0, 0, 0, 0.308);
   border-radius: 5px;
-  margin: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   height: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -23,7 +24,8 @@
 .buttonBig {
   height: 120px;
   width: 50%;
-  margin: 2px;
+  margin-top: 5px;
+  margin-left: 2px;
   margin-right: 10px;
 }
 

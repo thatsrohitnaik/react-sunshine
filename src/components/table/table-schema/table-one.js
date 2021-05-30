@@ -2,7 +2,7 @@ const schema = [
   {
     headerName: 'File Name',
     field: 'fileName',
-    minWidth: 180,
+    minWidth: 80,
     headercheckboxSelection: true,
     headercheckboxSelectionFilteredOnly: true,
     checkboxSelection: true,
@@ -11,62 +11,62 @@ const schema = [
   {
     headerName: 'Attachment',
     field: 'attachment',
-    minWidth: 180,
+    minWidth: 80,
     filter: 'agTextColumnFilter'
   },
   {
     headerName: 'Source File',
     field: 'sourceFile',
-    minWidth: 180,
+    minWidth: 80,
     filter: 'agTextColumnFilter'
   },
   {
     headerName: 'Ext',
     field: 'ext',
-    minWidth: 180,
+    minWidth: 20,
     filter: 'agTextColumnFilter'
   },
   {
     headerName: 'DS Entities',
     field: 'dsEntities',
-    minWidth: 180,
+    minWidth: 80,
     filter: 'agNumberColumnFilter'
   },
   {
     headerName: 'Pages',
     field: 'pages',
-    minWidth: 180,
+    minWidth: 50,
     filter: 'agNumberColumnFilter'
   },
   {
     headerName: 'Redact Entities',
     field: 'redactEntities',
-    minWidth: 180,
+    minWidth: 80,
     filter: 'agNumberColumnFilter'
   },
   {
     headerName: 'Redact Entities Pages',
     field: 'redactEntitiesPages',
-    minWidth: 180,
+    minWidth: 80,
     filter: 'agNumberColumnFilter'
   },
   {
     headerName: 'From/To/CcDS',
     field: 'fromToCcDS',
-    minWidth: 180,
+    minWidth: 80,
     filter: 'agTextColumnFilter'
   },
   {
     headerName: 'Redact',
     field: 'redact',
     minWidth: 180,
-    filter: 'agTextColumnFilter'
+    cellRenderer: 'dropDownRedact'
   },
   {
     headerName: 'Share',
     field: 'share',
     minWidth: 180,
-    filter: 'agTextColumnFilter'
+    cellRenderer: 'dropDownShare'
   }
 ];
 
