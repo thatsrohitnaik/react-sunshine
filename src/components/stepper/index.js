@@ -6,7 +6,7 @@ const Stepper = props => {
   return (
     <>
       {steps.length > 0 ? (
-        <ul class="stepper">
+        <ul className="stepper">
           {steps.map((s, index) => (
             <li
               key={index}

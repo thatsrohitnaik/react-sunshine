@@ -20,7 +20,7 @@ const PageOne = () => {
     <div className="">
       <NavBar />
       <div className="gutterSpace">
-        <ul class="nav nav-tabs">
+        <ul className="nav nav-tabs">
           <li className="" style={{ float: 'right' }}>
             <a data-toggle="tab" href="#">
               SAR SETTING

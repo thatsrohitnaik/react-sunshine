@@ -28,9 +28,9 @@ const Table = props => {
 
   const dropDownRedact = param => {
     return (
-      <div class="form-group">
+      <div className="form-group">
         <select
-          class="form-control selectDropdown"
+          className="form-control selectDropdown"
           id="redact"
           style={{ border: 'none', backgroundColor: 'transparent' }}
         >
@@ -43,9 +43,9 @@ const Table = props => {
 
   const dropDownShare = param => {
     return (
-      <div class="form-group">
+      <div className="form-group">
         <select
-          class="form-control selectDropdown"
+          className="form-control selectDropdown"
           id="share"
           style={{ border: 'none', backgroundColor: 'transparent' }}
         >

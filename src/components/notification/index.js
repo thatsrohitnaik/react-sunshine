@@ -44,13 +44,13 @@ const panel = props => {
             </div>
           </div>
           <div className="col-sm-4 displayFlex">
-            <button type="button" class="btn btn-info buttonBig success">
+            <button type="button" className="btn btn-info buttonBig success">
               <span>
                 <i className="fas fa-sync" />
                 {' RE PROCESS'}
               </span>
             </button>
-            <button type="button" class="btn btn-light buttonBig">
+            <button type="button" className="btn btn-light buttonBig">
               <span>
                 <i className="fas fa-edit" />
                 {' REDACT'}
