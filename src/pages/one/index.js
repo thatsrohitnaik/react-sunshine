@@ -24,7 +24,7 @@ const PageOne = () => {
       <div className="gutterSpace">
         <ul className="nav nav-tabs">
           <li>
-            <p className="inbetween">Details for Rachel</p>
+            <h5 className="inbetween">Details for Rachel</h5>
           </li>
           <li className="" style={{ float: 'right' }}>
             <a data-toggle="tab" href="#">
