@@ -2,7 +2,7 @@ const schema = [
   {
     headerName: 'File Name',
     field: 'fileName',
-    minWidth: 80,
+    minWidth: 180,
     headercheckboxSelection: true,
     headercheckboxSelectionFilteredOnly: true,
     checkboxSelection: true,
@@ -11,13 +11,13 @@ const schema = [
   {
     headerName: 'Attachment',
     field: 'attachment',
-    minWidth: 80,
+    minWidth: 180,
     filter: 'agTextColumnFilter'
   },
   {
     headerName: 'Source File',
     field: 'sourceFile',
-    minWidth: 80,
+    minWidth: 180,
     filter: 'agTextColumnFilter'
   },
   {
@@ -29,7 +29,7 @@ const schema = [
   {
     headerName: 'DS Entities',
     field: 'dsEntities',
-    minWidth: 80,
+    minWidth: 180,
     filter: 'agNumberColumnFilter'
   },
   {
@@ -41,19 +41,19 @@ const schema = [
   {
     headerName: 'Redact Entities',
     field: 'redactEntities',
-    minWidth: 80,
+    minWidth: 180,
     filter: 'agNumberColumnFilter'
   },
   {
     headerName: 'Redact Entities Pages',
     field: 'redactEntitiesPages',
-    minWidth: 80,
+    minWidth: 180,
     filter: 'agNumberColumnFilter'
   },
   {
     headerName: 'From/To/CcDS',
     field: 'fromToCcDS',
-    minWidth: 80,
+    minWidth: 180,
     filter: 'agTextColumnFilter'
   },
   {
