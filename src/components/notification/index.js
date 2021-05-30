@@ -59,7 +59,6 @@ const panel = props => {
           </div>
         </div>
       </div>
-      <br />
     </>
   );
 };

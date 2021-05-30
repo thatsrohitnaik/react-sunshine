@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
-import './style.css';
+import './style.scss';
 
 const Table = props => {
   const { schema } = props;
