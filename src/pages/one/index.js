@@ -11,6 +11,7 @@ import NavBar from '../../components/nav/';
 import BasicTable from '../../components/table/basic';
 import infoSchema from './table-schema/table-info';
 import infoData from './table-data/table-info';
+import panelData from './panel-data/panel';
 
 import './style.css';
 
@@ -36,7 +37,7 @@ const PageOne = () => {
         ) : null}
       </div>
       <Stepper steps={Steps} />
-      <Panel />
+      <Panel panelData={panelData} />
       {detailData ? <Table schema={detailSchema} rowData={detailData} /> : null}
     </div>
   );

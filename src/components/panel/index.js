@@ -1,34 +1,8 @@
 import React from 'react';
 import './style.css';
 
-const panel = () => {
-  const data = [
-    {
-      icon: 'fas fa-share-alt',
-      count: 133,
-      text: 'Share with DS'
-    },
-    {
-      icon: 'fas fa-unlink',
-      count: 300,
-      text: 'Not released'
-    },
-    {
-      icon: 'fas fa-ban',
-      count: 0,
-      text: 'spam'
-    },
-    {
-      icon: 'fas fa-cloud',
-      count: 2,
-      text: 'Related - Do Not Share'
-    },
-    {
-      icon: 'fas fa-copy',
-      count: 2,
-      text: 'Duplicates'
-    }
-  ];
+const panel = props => {
+  const { panelData = [] } = props;
 
   return (
     <>
@@ -38,8 +12,8 @@ const panel = () => {
             <div className="">
               <div className="row">
                 <>
-                  {data.length > 0
-                    ? data.map(d => (
+                  {panelData.length > 0
+                    ? panelData.map(d => (
                         <div className="col-sm-4">
                           <div className="divCard">
                             <table className="tableSize">
