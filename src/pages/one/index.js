@@ -20,8 +20,12 @@ const PageOne = () => {
   return (
     <div className="">
       <NavBar />
+      <div className="backAbsBox" />
       <div className="gutterSpace">
         <ul className="nav nav-tabs">
+          <li>
+            <p className="inbetween">Details for Rachel</p>
+          </li>
           <li className="" style={{ float: 'right' }}>
             <a data-toggle="tab" href="#">
               SAR SETTING

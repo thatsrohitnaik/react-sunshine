@@ -35,7 +35,8 @@ const Table = props => {
         height: '120px',
         border: '1px solid rgb(221, 221, 221)',
         padding: '15px',
-        borderTop: 'none'
+        borderTop: 'none',
+        backgroundColor: 'white'
       }}
     >
       {' '}
