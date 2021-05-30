@@ -2,32 +2,32 @@ const schema = [
   {
     headerName: 'Client',
     field: 'client',
-    minWidth: 180
+    minWidth: 150
   },
   {
     headerName: 'Fullname',
     field: 'fullname',
-    minWidth: 180
+    minWidth: 150
   },
   {
     headerName: 'Data Subject',
     field: 'dataSubject',
-    minWidth: 180
-  },
-  {
-    headerName: 'Client Detail',
-    field: 'clientDetail',
-    minWidth: 180
+    minWidth: 150
   },
   {
     headerName: 'Alliases',
     field: 'alliases',
-    minWidth: 180
+    minWidth: 150
   },
   {
     headerName: 'Gender',
     field: 'gender',
-    minWidth: 180
+    minWidth: 50
+  },
+  {
+    headerName: 'Client Detail',
+    field: 'clientDetail',
+    minWidth: 250
   }
 ];
 

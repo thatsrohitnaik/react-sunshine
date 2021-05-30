@@ -12,14 +12,14 @@ const Stepper = props => {
               key={index}
               className={
                 s.current
-                  ? 'stepper__item current'
+                  ? 'stepper__item current liBorder'
                   : s.complete
-                  ? 'stepper__item complete'
-                  : 'stepper__item'
+                  ? 'stepper__item complete liBorder'
+                  : 'stepper__item liBorder'
               }
             >
               <p className="largeFont">
-                {index + ' '}
+                {index + 1 + ' '}
                 <span className="smallFont">{s.step}</span>
               </p>
             </li>

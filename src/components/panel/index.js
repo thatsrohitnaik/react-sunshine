@@ -5,28 +5,28 @@ const panel = () => {
   const data = [
     {
       icon: 'fas fa-share-alt',
-      count: 2,
-      text: 'some test'
+      count: 133,
+      text: 'Share with DS'
     },
     {
       icon: 'fas fa-unlink',
-      count: 2,
-      text: 'some test'
+      count: 300,
+      text: 'Not released'
     },
     {
       icon: 'fas fa-ban',
-      count: 2,
+      count: 0,
       text: 'spam'
     },
     {
       icon: 'fas fa-cloud',
       count: 2,
-      text: 'some test'
+      text: 'Related - Do Not Share'
     },
     {
       icon: 'fas fa-copy',
       count: 2,
-      text: 'some test'
+      text: 'Duplicates'
     }
   ];
 

@@ -26,7 +26,17 @@ const Table = props => {
   };
   console.log(rowData);
   return (
-    <div className="ag-theme-alpine" style={{ height: '90px' }}>
+    <div
+      className="ag-theme-alpine"
+      style={{
+        height: '90px',
+        border: '1px solid #ddd',
+        height: '120px',
+        border: '1px solid rgb(221, 221, 221)',
+        padding: '15px',
+        borderTop: 'none'
+      }}
+    >
       {' '}
       <AgGridReact
         defaultColDef={{

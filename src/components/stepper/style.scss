@@ -27,11 +27,14 @@ body {
     background: #e7e7e7;
   }
 }
+.liBorder {
+  border: 1px solid #e7e7e7;
+}
 
 .stepper__item {
   flex: 100%;
   padding: 20px 20px 20px 40px;
-  background: whitesmoke;
+  background: white;
   margin: 0 0 0 -19px;
   -webkit-clip-path: polygon(
     20px 50%,
