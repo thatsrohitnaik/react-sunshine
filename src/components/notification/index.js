@@ -6,7 +6,7 @@ const panel = props => {
 
   return (
     <>
-      <div className="gutterSpace">
+      <div className="gutter-space">
         <div className="row">
           <div className="col-sm-8">
             <div className="">
@@ -15,7 +15,7 @@ const panel = props => {
                   {notificationData.length > 0
                     ? notificationData.map(d => (
                         <div className="col-sm-4">
-                          <div className="divCard">
+                          <div className="div-card">
                             <table className="tableSize">
                               <tr>
                                 <td className="tdWidth">
@@ -44,7 +44,7 @@ const panel = props => {
             </div>
           </div>
           <div className="col-sm-4 displayFlex">
-            <button type="button" className="btn btn-info buttonBig success">
+            <button type="button" className="btn btn-info button-big success">
               <span>
                 <i className="fas fa-sync" />
                 {' RE PROCESS'}

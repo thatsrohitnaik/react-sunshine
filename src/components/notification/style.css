@@ -12,7 +12,7 @@
   height: 100%;
 }
 
-.divCard {
+.div-card {
   border: 1px solid rgba(0, 0, 0, 0.308);
   border-radius: 5px;
   margin-bottom: 5px;
@@ -21,7 +21,7 @@
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
 }
 
-.buttonBig {
+.button-big {
   height: 120px;
   width: 50%;
   margin-top: 5px;

@@ -1,13 +1,15 @@
 import React from 'react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
-import PageOne from './pages/one/';
+import Home from './pages/home/';
+import homeData from './data/home';
+
 import './style.css';
 
 const App = () => {
   return (
     <div className="">
-      <PageOne />
+      <Home data={homeData} />
     </div>
   );
 };

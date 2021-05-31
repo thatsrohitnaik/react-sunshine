@@ -3,28 +3,25 @@ import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 import Table from '../../components/table/';
 import detailSchema from './table-schema/table-one';
-import detailData from './table-data/table-one';
 import Stepper from '../../components/stepper/';
-import Steps from '../../components/stepper/stepper-one';
 import Notification from '../../components/notification/';
 import NavBar from '../../components/nav/';
 import BasicTable from '../../components/table/basic';
 import infoSchema from './table-schema/table-info';
-import infoData from './table-data/table-info';
-import notificationData from './notification-data/notification';
 import Dropdown from '../../components/dropdown/';
 
 import './style.css';
 
-const PageOne = () => {
+const InfoPanel = props => {
+  const { user, info } = props;
   return (
-    <div className="">
-      <NavBar />
-      <div className="backAbsBox" />
-      <div className="gutterSpace">
+    <>
+      {' '}
+      <div className="info-panel-background" />
+      <div className="gutter-space">
         <ul className="nav nav-tabs">
           <li>
-            <h5 className="inbetween">Details for Rachel</h5>
+            <h5 className="align-in-middle">Details for {user.name}</h5>
           </li>
           <li className="" style={{ float: 'right' }}>
             <a data-toggle="tab" href="#">
@@ -37,21 +34,28 @@ const PageOne = () => {
             </a>
           </li>
         </ul>
-        {infoData ? (
-          <BasicTable schema={infoSchema} rowData={infoData} />
-        ) : null}
+        {info ? <BasicTable schema={infoSchema} rowData={info} /> : null}
       </div>
-      <Stepper steps={Steps} />
-      <Notification notificationData={notificationData} />
+    </>
+  );
+};
+const Home = props => {
+  const { info, detail, notification, user, steps } = props.data;
+  return (
+    <div className="">
+      <NavBar />
+      <InfoPanel info={info} user={user} />
+      <Stepper steps={steps} />
+      <Notification notificationData={notification} />
       <div className="row">
         <div className="col-md-9" />
         <div className="col-md-3">
           <Dropdown />
         </div>
       </div>
-      {detailData ? <Table schema={detailSchema} rowData={detailData} /> : null}
+      {detail ? <Table schema={detailSchema} rowData={detail} /> : null}
     </div>
   );
 };
 
-export default PageOne;
+export default Home;
