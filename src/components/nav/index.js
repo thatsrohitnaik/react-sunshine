@@ -3,7 +3,7 @@ import './style.css';
 
 const NavBar = () => {
   return (
-    <nav className="navbar navBackground">
+    <nav className="navbar nav-background">
       <div className="container-fluid">
         <div className="navbar-header">
           <a className="navbar-brand" href="#" style={{ color: 'white' }}>

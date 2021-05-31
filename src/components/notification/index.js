@@ -50,7 +50,7 @@ const panel = props => {
                 {' RE PROCESS'}
               </span>
             </button>
-            <button type="button" className="btn btn-light buttonBig">
+            <button type="button" className="btn btn-light button-big">
               <span>
                 <i className="fas fa-edit" />
                 {' REDACT'}

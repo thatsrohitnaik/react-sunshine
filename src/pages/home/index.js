@@ -12,6 +12,43 @@ import Dropdown from '../../components/dropdown/';
 
 import './style.css';
 
+const action = {
+  title: 'Action',
+  select: [
+    {
+      group: '',
+      option: [
+        { label: 'Do Not Process', value: 1 },
+        { label: 'Add To Process', value: 2 }
+      ]
+    },
+    {
+      group: 'Change Classification',
+      option: [
+        { label: 'Share With DS', value: 5 },
+        { label: 'Do Not Share', value: 3 },
+        { label: 'Not Related', value: 4 }
+      ]
+    }
+  ]
+};
+
+const columns = {
+  title: 'Columns',
+  select: [
+    {
+      group: '',
+      option: [
+        { label: 'File Name', value: 1 },
+        { label: 'Ext', value: 2 },
+        { label: 'Page', value: 3 },
+        { label: 'Redact', value: 4 },
+        { label: 'Attachment', value: 5 }
+      ]
+    }
+  ]
+};
+
 const InfoPanel = props => {
   const { user, info } = props;
   return (
@@ -49,8 +86,9 @@ const Home = props => {
       <Notification notificationData={notification} />
       <div className="row">
         <div className="col-md-9" />
-        <div className="col-md-3">
-          <Dropdown />
+        <div className="col-md-3" style={{ display: 'flex' }}>
+          <Dropdown data={columns} />
+          <Dropdown data={action} />
         </div>
       </div>
       {detail ? <Table schema={detailSchema} rowData={detail} /> : null}

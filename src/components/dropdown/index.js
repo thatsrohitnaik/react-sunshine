@@ -15,34 +15,25 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Dropdown() {
+export default function Dropdown(prop) {
   const classes = useStyles();
-
+  const { data } = prop;
   return (
     <div>
-      <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="grouped-native-select">Choose Columns</InputLabel>
-        <Select native defaultValue="" id="grouped-native-select">
-          <option aria-label="None" value="" />
-          <option value={1}>File Name</option>
-          <option value={2}>Attachment</option>
-          <option value={2}>Change Redaction</option>
-        </Select>
-      </FormControl>
-      <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="grouped-native-select">Action</InputLabel>
-        <Select native defaultValue="" id="grouped-native-select">
-          <option aria-label="None" value="" />
-          <option value={1}>Do Not Process</option>
-          <option value={2}>Add To Process</option>
-          <optgroup label="Change Classification">
-            <option value={3}>Share With DS</option>
-            <option value={4}>Do Not Share</option>
-            <option value={5}>Not Related</option>
-          </optgroup>
-          <option value={2}>Change Redaction</option>
-        </Select>
-      </FormControl>
+      {data ? (
+        <FormControl className={classes.formControl}>
+          <InputLabel htmlFor="grouped-native-select">{data.title}</InputLabel>
+          <Select native defaultValue="" id="grouped-native-select">
+            {data.select.map(s => (
+              <optgroup label={s.group}>
+                {s.option.map(option => (
+                  <option value={option.value}>{option.label}</option>
+                ))}
+              </optgroup>
+            ))}
+          </Select>
+        </FormControl>
+      ) : null}
       {/* <FormControl className={classes.formControl}>
         <InputLabel htmlFor="grouped-select">Grouping</InputLabel>
         <Select defaultValue="" id="grouped-select">
